@@ -1,79 +1,44 @@
 import React from "react";
 
 const Buttons = (props) => {
-  // Functions - Category Buttons
-  function Trending() {
-    props.setUsersChoice(props.apiRequests.trending);
-  }
-
-  function PopularMovies() {
-    props.setUsersChoice(props.apiRequests.popularMovies);
-  }
-
-  function PopularTV() {
-    props.setUsersChoice(props.apiRequests.popularTV);
-  }
-
-  function UpcomingMovies() {
-    props.setUsersChoice(props.apiRequests.upcomingMovies);
-  }
-
-  function ActionMovies() {
-    props.setUsersChoice(props.apiRequests.actionMovies);
-  }
-
-  function ComedyMovies() {
-    props.setUsersChoice(props.apiRequests.comedyMovies);
-  }
-
-  function HorrorMovies() {
-    props.setUsersChoice(props.apiRequests.horrorMovies);
-  }
-
-  function RomanceMovies() {
-    props.setUsersChoice(props.apiRequests.romanceMovies);
-  }
-
-  function Documentaries() {
-    props.setUsersChoice(props.apiRequests.documentaries);
-  }
-
-  // One Function for all category buttons
+  // Function to handle all category buttons
   function Category(e) {
-    const target = e.target.getAttribute("category");
-    const categoryRequest = `apiRequests.${target}`;
+    const target = e.target.dataset.category;
+    const categoryRequest = target;
     props.setUsersChoice(categoryRequest);
-    console.log(categoryRequest);
-    console.log(props.usersChoice);
   }
 
   return (
-    <div>
-      <button onClick={Category} category="trending">
+    // Category buttons
+    <div className="categories">
+      <button className="categories__button btn" onClick={Category} data-category="flixnetOriginals">
+        Flixnet Originals
+      </button>
+      <button className="categories__button btn" onClick={Category} data-category="trending">
         Trending
       </button>
-      <button onClick={PopularMovies} category="popularMovies">
+      <button className="categories__button btn" onClick={Category} data-category="popularMovies">
         Popular Movies
       </button>
-      <button onClick={UpcomingMovies} category="upcomingMovies">
+      <button className="categories__button btn" onClick={Category} data-category="upcomingMovies">
         Upcoming Movies
       </button>
-      <button onClick={PopularTV} category="popularTV">
+      <button className="categories__button btn" onClick={Category} data-category="popularTV">
         Popular TV
       </button>
-      <button onClick={ActionMovies} category="actionMovies">
+      <button className="categories__button btn" onClick={Category} data-category="actionMovies">
         Action Movies
       </button>
-      <button onClick={ComedyMovies} category="comedyMovies">
+      <button className="categories__button btn" onClick={Category} data-category="comedyMovies">
         Comedy Movies
       </button>
-      <button onClick={HorrorMovies} category="horrorMovies">
+      <button className="categories__button btn" onClick={Category} data-category="horrorMovies">
         Horror Movies
       </button>
-      <button onClick={RomanceMovies} category="romanceMovies">
+      <button className="categories__button btn" onClick={Category} data-category="romanceMovies">
         Romance Movies
       </button>
-      <button onClick={Documentaries} category="documentaries">
+      <button className="categories__button btn" onClick={Category} data-category="documentaries">
         Documentaries
       </button>
     </div>
