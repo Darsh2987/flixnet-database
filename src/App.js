@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.scss";
 import apiRequests from "./apiRequests";
+import Header from "./components/Header";
 import Banner from "./components/Banner";
-import Buttons from "./components/Buttons";
 import DisplayGrid from "./components/DisplayGrid";
 
 function App() {
@@ -22,8 +22,8 @@ function App() {
 
   return (
     <div className="App">
+      <Header setUsersChoice={setUsersChoice} />
       <Banner movie={movie} />
-      <Buttons apiRequests={apiRequests} setUsersChoice={setUsersChoice} />
       <DisplayGrid movie={movie} />
     </div>
   );
