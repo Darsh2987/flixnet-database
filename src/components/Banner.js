@@ -5,8 +5,6 @@ import apiRequests from "../apiRequests";
 const Banner = () => {
   const [bannerMovie, setBannerMovie] = useState([]);
 
-  const imgBaseUrl = "https://image.tmdb.org/t/p/original";
-
   // Fetch data from API
   useEffect(() => {
     async function fetchData() {
@@ -19,19 +17,21 @@ const Banner = () => {
     fetchData();
   }, []);
 
-  const backgroundImagePath = imgBaseUrl + bannerMovie.backdrop_path;
+  const backgroundImagePath = "https://image.tmdb.org/t/p/original" + bannerMovie.backdrop_path;
 
   return (
     <div
       className="banner"
       style={{
         backgroundImage: `url(${backgroundImagePath})`,
-        backgroundSize: "cover",
-        backgroundPosition: "top center",
-        width: "100%",
-        height: "200px",
       }}
-    ></div>
+    >
+      <div className="banner__description">
+        <h1>{bannerMovie.title || bannerMovie.name}</h1>
+        <p>{bannerMovie.overview}</p>
+        <p>{bannerMovie.vote_average}</p>
+      </div>
+    </div>
   );
 };
 
