@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.scss";
 import apiRequests from "./apiRequests";
+import Banner from "./components/Banner";
 import Buttons from "./components/Buttons";
 import DisplayGrid from "./components/DisplayGrid";
 
@@ -17,10 +18,11 @@ function App() {
     }
 
     fetchData();
-  }, [movie]);
+  }, [usersChoice]);
 
   return (
     <div className="App">
+      <Banner movie={movie} />
       <Buttons apiRequests={apiRequests} setUsersChoice={setUsersChoice} />
       <DisplayGrid movie={movie} />
     </div>

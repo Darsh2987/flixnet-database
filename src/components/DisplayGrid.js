@@ -1,7 +1,7 @@
 import React from "react";
 
 const DisplayGrid = (props) => {
-  const imgBaseUrl = "https://image.tmdb.org/t/p/w1280";
+  const imgBaseUrl = "https://image.tmdb.org/t/p/original";
   return (
     <div className="grid">
       {props.movie.map((item) => (
