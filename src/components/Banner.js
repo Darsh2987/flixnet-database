@@ -2,6 +2,7 @@
 // import axios from "axios";
 // import apiRequests from "../apiRequests";
 import React from "react";
+import Header from "../components/Header";
 
 const Banner = (props) => {
   const data = props.movie;
@@ -20,7 +21,8 @@ const Banner = (props) => {
         backgroundImage: `url(${backgroundImagePath})`,
       }}
     >
-      <div className="banner--topfade"></div>
+      {/* <div className="banner--topfade"></div> */}
+      <Header />
       <div className="banner__contents">
         <div className="banner__contents-description">
           <h1 className="banner__contents-title">{randomData?.title || randomData?.name}</h1>
