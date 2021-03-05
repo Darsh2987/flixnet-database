@@ -1,23 +1,17 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import apiRequests from "../apiRequests";
+// import React, { useState, useEffect } from "react";
+// import axios from "axios";
+// import apiRequests from "../apiRequests";
+import React from "react";
 
-const Banner = () => {
-  const [bannerMovie, setBannerMovie] = useState([]);
+const Banner = (props) => {
+  const data = props.movie;
 
-  // Fetch data from API
-  useEffect(() => {
-    async function fetchData() {
-      const requestOne = await axios(apiRequests.flixnetOriginals);
-      const requestTwo = await axios(apiRequests.trending);
-      const requests = requestOne.data.results.concat(requestTwo.data.results);
-      const randomRequest = Math.floor(Math.random() * requests.length - 1);
-      setBannerMovie(requests[randomRequest]);
-    }
-    fetchData();
-  }, []);
+  const randomData = data[Math.floor(Math.random() * data.length - 1)];
+  const backgroundImagePath = "https://image.tmdb.org/t/p/original" + randomData?.backdrop_path;
 
-  const backgroundImagePath = "https://image.tmdb.org/t/p/original" + bannerMovie.backdrop_path;
+  function truncate(str, n) {
+    return str?.length > n ? str.substr(0, n - 1) + "..." : str;
+  }
 
   return (
     <div
@@ -26,19 +20,18 @@ const Banner = () => {
         backgroundImage: `url(${backgroundImagePath})`,
       }}
     >
-      <div className="banner__description">
-        <h1>{bannerMovie.title || bannerMovie.name}</h1>
-        <p>{bannerMovie.overview}</p>
-        <p>{bannerMovie.vote_average}</p>
+      <div className="banner--topfade"></div>
+      <div className="banner__contents">
+        <div className="banner__contents-description">
+          <h1 className="banner__contents-title">{randomData?.title || randomData?.name}</h1>
+          <p className="banner__contents-overview">{truncate(randomData?.overview, 150)}</p>
+          <p className="banner__contents-vote">{randomData?.vote_average}</p>
+        </div>
       </div>
+
+      <div className="banner--bottomfade"></div>
     </div>
   );
 };
 
 export default Banner;
-
-// https://image.tmdb.org/t/p/original${bannerMovie.backdrop_path}
-
-// `url({imgBaseUrl + bannerMovie.backdrop_path})`
-
-// url("https://image.tmdb.org/t/p/original/41ZBU34r8WqCBSczUzL7SMQAgX3.jpg")
