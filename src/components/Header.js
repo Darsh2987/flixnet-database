@@ -1,11 +1,12 @@
 import React from "react";
 import Buttons from "./Buttons";
 
-const Header = (props) => {
+const Header = () => {
   return (
     <div className="header">
-      <h1 className="header__logo">Flixnet</h1>
-      <Buttons setUsersChoice={props.setUsersChoice} />
+      <div className="header__inner">
+        <h1 className="header__logo">Flixnet DB</h1>
+      </div>
     </div>
   );
 };
