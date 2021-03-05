@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.scss";
 import apiRequests from "./apiRequests";
-import Header from "./components/Header";
 import Banner from "./components/Banner";
 import DisplayGrid from "./components/DisplayGrid";
 import Buttons from "./components/Buttons";
@@ -23,7 +22,6 @@ function App() {
 
   return (
     <div className="App">
-      <Header setUsersChoice={setUsersChoice} />
       <Banner movie={movie} />
       <Buttons setUsersChoice={setUsersChoice} />
       <DisplayGrid movie={movie} />
