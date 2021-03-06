@@ -9,73 +9,40 @@ const Buttons = (props) => {
   }
 
   return (
-    // <div className="categories">
-    //   <button className="categories__button btn" onClick={Category} data-category="flixnetOriginals">
-    //     Flixnet Originals
-    //   </button>
-    //   <button className="categories__button btn" onClick={Category} data-category="trending">
-    //     Trending
-    //   </button>
-    //   <button className="categories__button btn" onClick={Category} data-category="popularMovies">
-    //     Popular Movies
-    //   </button>
-    //   <button className="categories__button btn" onClick={Category} data-category="upcomingMovies">
-    //     Upcoming Movies
-    //   </button>
-    //   <button className="categories__button btn" onClick={Category} data-category="popularTV">
-    //     Popular TV
-    //   </button>
-    //   <button className="categories__button btn" onClick={Category} data-category="actionMovies">
-    //     Action Movies
-    //   </button>
-    //   <button className="categories__button btn" onClick={Category} data-category="comedyMovies">
-    //     Comedy Movies
-    //   </button>
-    //   <button className="categories__button btn" onClick={Category} data-category="horrorMovies">
-    //     Horror Movies
-    //   </button>
-    //   <button className="categories__button btn" onClick={Category} data-category="romanceMovies">
-    //     Romance Movies
-    //   </button>
-    //   <button className="categories__button btn" onClick={Category} data-category="documentaries">
-    //     Documentaries
-    //   </button>
-    // </div>
-    // Category buttons
     <ul className="categories">
-      <li className="categories__button btn" onClick={Category} data-category="flixnetOriginals" tabindex="1">
+      <li className="categories__button btn" onClick={Category} data-category="flixnetOriginals" tabIndex="1">
         Flixnet Originals
       </li>
-      <li className="categories__button btn" onClick={Category} data-category="trending" tabindex="1">
+      <li className="categories__button btn" onClick={Category} data-category="trending" tabIndex="1">
         Trending
       </li>
       <li className="categories__button categories__button-movies">
         Movies
         <ul>
-          <li className="categories__button btn" onClick={Category} data-category="popularMovies" tabindex="1">
+          <li className="categories__button btn" onClick={Category} data-category="popularMovies" tabIndex="1">
             Popular Movies
           </li>
-          <li className="categories__button btn" onClick={Category} data-category="upcomingMovies" tabindex="1">
+          <li className="categories__button btn" onClick={Category} data-category="upcomingMovies" tabIndex="1">
             Upcoming Movies
           </li>
-          <li className="categories__button btn" onClick={Category} data-category="actionMovies" tabindex="1">
+          <li className="categories__button btn" onClick={Category} data-category="actionMovies" tabIndex="1">
             Action Movies
           </li>
-          <li className="categories__button btn" onClick={Category} data-category="comedyMovies" tabindex="1">
+          <li className="categories__button btn" onClick={Category} data-category="comedyMovies" tabIndex="1">
             Comedy Movies
           </li>
-          <li className="categories__button btn" onClick={Category} data-category="horrorMovies" tabindex="1">
+          <li className="categories__button btn" onClick={Category} data-category="horrorMovies" tabIndex="1">
             Horror Movies
           </li>
-          <li className="categories__button btn" onClick={Category} data-category="romanceMovies" tabindex="1">
+          <li className="categories__button btn" onClick={Category} data-category="romanceMovies" tabIndex="1">
             Romance Movies
           </li>
         </ul>
       </li>
-      <li className="categories__button btn" onClick={Category} data-category="popularTV" tabindex="1">
+      <li className="categories__button btn" onClick={Category} data-category="popularTV" tabIndex="1">
         Popular TV
       </li>
-      <li className="categories__button btn" onClick={Category} data-category="documentaries" tabindex="1">
+      <li className="categories__button btn" onClick={Category} data-category="documentaries" tabIndex="1">
         Documentaries
       </li>
     </ul>
