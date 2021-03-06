@@ -2,7 +2,7 @@
   background-size: cover;
   background-position: top center;
   width: 100%;
-  height: 650px;
+  height: 700px;
 
   &--topfade {
     height: 7rem;
@@ -15,11 +15,11 @@
     height: 11rem;
     background-image: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.7), #000);
     position: relative;
-    top: 206px;
+    top: 241px;
   }
 
   &__contents {
-    max-width: 1200px;
+    width: 1200px;
     position: relative;
     top: 220px;
     margin: 0 auto;

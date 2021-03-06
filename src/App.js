@@ -22,8 +22,7 @@ function App() {
 
   return (
     <div className="App">
-      <Banner movie={movie} />
-      <Buttons setUsersChoice={setUsersChoice} />
+      <Banner movie={movie} setUsersChoice={setUsersChoice} />
       <DisplayGrid movie={movie} />
     </div>
   );

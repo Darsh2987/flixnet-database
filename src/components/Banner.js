@@ -1,6 +1,3 @@
-// import React, { useState, useEffect } from "react";
-// import axios from "axios";
-// import apiRequests from "../apiRequests";
 import React from "react";
 import Header from "../components/Header";
 
@@ -22,7 +19,7 @@ const Banner = (props) => {
       }}
     >
       {/* <div className="banner--topfade"></div> */}
-      <Header />
+      <Header setUsersChoice={props.setUsersChoice} />
       <div className="banner__contents">
         <div className="banner__contents-description">
           <h1 className="banner__contents-title">{randomData?.title || randomData?.name}</h1>
