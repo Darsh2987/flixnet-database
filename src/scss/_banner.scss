@@ -4,18 +4,11 @@
   width: 100%;
   height: 700px;
 
-  &--topfade {
-    height: 7rem;
-    background-image: linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.2), #000);
-    position: relative;
-    top: 0px;
-  }
-
   &--bottomfade {
-    height: 11rem;
+    height: 9rem;
     background-image: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.7), #000);
     position: relative;
-    top: 241px;
+    top: 273px;
   }
 
   &__contents {
@@ -37,6 +30,34 @@
 
     &-overview {
       font-size: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .banner {
+    &__contents {
+      width: 900px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .banner {
+    &--bottomfade {
+      top: 285px;
+    }
+
+    &__contents {
+      width: 600px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .banner {
+    &__contents {
+      width: 350px;
     }
   }
 }

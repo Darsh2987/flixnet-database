@@ -16,7 +16,7 @@
     }
 
     &:hover {
-      color: #4f0077;
+      color: #6641aa;
     }
 
     &-movies ul {
@@ -28,6 +28,7 @@
 
       li {
         padding: 0.3rem;
+        color: #fff;
       }
     }
 
@@ -39,5 +40,11 @@
         text-decoration: underline;
       }
     }
+  }
+}
+
+@media (max-width: 900px) {
+  .categories {
+    display: none;
   }
 }
