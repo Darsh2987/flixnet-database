@@ -18,7 +18,6 @@ const Banner = (props) => {
         backgroundImage: `url(${backgroundImagePath})`,
       }}
     >
-      {/* <div className="banner--topfade"></div> */}
       <Header setUsersChoice={props.setUsersChoice} />
       <div className="banner__contents">
         <div className="banner__contents-description">
