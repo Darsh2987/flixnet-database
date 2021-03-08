@@ -14,6 +14,11 @@
     color: #6641aa;
     cursor: pointer;
   }
+
+  .fa-bars,
+  .fa-times {
+    display: none;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -26,6 +31,24 @@
 
 @media (max-width: 900px) {
   .header {
+    .fa-bars,
+    .fa-times {
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    .fa-bars {
+      display: block;
+    }
+    .fa-bars--invisible {
+      display: none;
+    }
+
+    .fa-times--visible {
+      display: block;
+      z-index: 10;
+    }
+
     &__inner {
       width: 600px;
     }

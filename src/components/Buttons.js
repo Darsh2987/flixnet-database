@@ -9,7 +9,7 @@ const Buttons = (props) => {
   }
 
   return (
-    <ul className="categories">
+    <ul className={`categories ${props.hideHamburgerIcon ? "nav-overlay--visible" : ""}`}>
       <li className="categories__button btn" onClick={Category} data-category="flixnetOriginals" tabIndex="1">
         Flixnet Originals
       </li>
