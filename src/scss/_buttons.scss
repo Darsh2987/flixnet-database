@@ -20,11 +20,13 @@
     }
 
     &-movies ul {
-      display: none;
+      opacity: 0;
+      visibility: hidden;
       position: absolute;
       background-color: #4f0077;
       padding: 1rem;
       margin-top: 1rem;
+      border-radius: 3px;
 
       li {
         padding: 0.3rem;
@@ -33,7 +35,8 @@
     }
 
     &-movies:hover ul {
-      display: block;
+      opacity: 1;
+      visibility: visible;
 
       li:hover {
         color: #fff;
@@ -45,6 +48,38 @@
 
 @media (max-width: 900px) {
   .categories {
-    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10;
+
+    &__button {
+      margin: 0;
+      width: 160px;
+
+      &-movies ul {
+        background-color: transparent;
+        position: relative;
+        padding: 0;
+        margin: 0;
+        opacity: 0;
+        visibility: hidden;
+        max-height: 0;
+        transition: all 0.5s ease-in-out;
+      }
+
+      &-movies:hover ul {
+        opacity: 1;
+        visibility: visible;
+        max-height: 175px;
+      }
+    }
   }
 }
