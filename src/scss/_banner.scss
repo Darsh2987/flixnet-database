@@ -70,31 +70,35 @@
 @media (max-width: 1016px) {
   .banner {
     &--bottomfade {
-      top: 247px;
+      top: 285px;
     }
 
     &__contents {
-      width: 600px;
+      width: 900px;
     }
   }
 }
 
-@media (max-width: 900px) {
-  .banner {
-    &--bottomfade {
-      top: 285px;
-    }
-  }
-}
-
-@media (max-width: 616px) {
+@media (max-width: 916px) {
   .banner {
     &--bottomfade {
       top: 285px;
     }
 
     &__contents {
-      width: 350px;
+      width: 700px;
+    }
+  }
+}
+
+@media (max-width: 716px) {
+  .banner {
+    &--bottomfade {
+      top: 285px;
+    }
+
+    &__contents {
+      width: 100%;
     }
   }
 }

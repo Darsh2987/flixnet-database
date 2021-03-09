@@ -66,15 +66,23 @@
     }
 
     &__inner {
-      width: 600px;
+      width: 900px;
     }
   }
 }
 
-@media (max-width: 616px) {
+@media (max-width: 916px) {
   .header {
     &__inner {
-      width: 350px;
+      width: 700px;
+    }
+  }
+}
+
+@media (max-width: 716px) {
+  .header {
+    &__inner {
+      width: 100%;
     }
   }
 }
