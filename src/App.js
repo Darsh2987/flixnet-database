@@ -20,9 +20,20 @@ function App() {
     fetchData();
   }, [usersChoice]);
 
+  // Function/conditional statment to apply a specific class name depending on the vote average value
+  function setVoteClass(vote) {
+    if (vote >= 8) {
+      return "grid__item-vote--green";
+    } else if (vote >= 5) {
+      return "grid__item-vote--orange";
+    } else {
+      return "grid__item-vote--red";
+    }
+  }
+
   return (
     <div className="App">
-      <Banner movie={movie} setUsersChoice={setUsersChoice} />
+      <Banner movie={movie} setUsersChoice={setUsersChoice} setVoteClass={setVoteClass} />
       <DisplayGrid movie={movie} />
     </div>
   );

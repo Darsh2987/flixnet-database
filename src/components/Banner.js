@@ -23,7 +23,7 @@ const Banner = (props) => {
         <div className="banner__contents-description">
           <h1 className="banner__contents-title">{randomData?.title || randomData?.name}</h1>
           <p className="banner__contents-overview">{truncate(randomData?.overview, 150)}</p>
-          <p className="banner__contents-vote">{randomData?.vote_average}</p>
+          <p className={`banner__contents-vote ${props.setVoteClass(randomData?.vote_average)}`}>{randomData?.vote_average}</p>
         </div>
       </div>
 

@@ -17,8 +17,8 @@
     padding: 0.5rem;
     transform: translateY(101%);
     transition: transform 0.3s ease-in-out;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
   }
 
   &-title {
@@ -35,7 +35,8 @@
     align-self: flex-end;
     padding: 0.5rem;
     background-color: #350050;
-    border-radius: 3px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 
     &--green {
       color: green;
