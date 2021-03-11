@@ -11,7 +11,7 @@ const Banner = (props) => {
   // Image path of the random selected object from the "data" array
   const backgroundImagePath = "https://image.tmdb.org/t/p/original" + randomData?.backdrop_path;
 
-  // Truncate function for banner description to show only a certain amout of words
+  // Truncate function to show only a specified amout of letter
   function truncate(str, n) {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
   }
@@ -26,8 +26,8 @@ const Banner = (props) => {
       <Header setUsersChoice={props.setUsersChoice} />
       <div className="banner__contents">
         <div className="banner__contents-description">
-          <h1 className="banner__contents-title">{randomData?.title || randomData?.name}</h1>
-          <p className="banner__contents-overview">{truncate(randomData?.overview, 150)}</p> // Truncate function used here, passing 150 to define number of words to be used
+          <h1 className="banner__contents-title">{truncate(randomData?.title, 20) || truncate(randomData?.name, 20)}</h1>
+          <p className="banner__contents-overview">{truncate(randomData?.overview, 150)}</p>
           <p className={`banner__contents-vote ${props.setVoteClass(randomData?.vote_average)}`}>{randomData?.vote_average}</p>
         </div>
       </div>
