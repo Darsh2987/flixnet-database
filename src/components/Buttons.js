@@ -11,7 +11,6 @@ const Buttons = (props) => {
   return (
     <ul className={`categories ${props.hideHamburgerIcon ? "nav-overlay--visible" : ""}`}>
       {" "}
-      // conditional to set className dependant on the "props" state
       <li className="categories__button btn" onClick={Category} data-category="flixnetOriginals" tabIndex="1">
         Flixnet Originals
       </li>
