@@ -8,11 +8,13 @@ const Header = (props) => {
   const [hideHamburgerIcon, setHideHamburgerIcon] = useState("");
   const [showCrossIcon, setsShowCrossIcon] = useState("");
 
+  // Function click event to hide hamburger icon and show cross icon
   const showMobileNav = () => {
     setHideHamburgerIcon(true);
     setsShowCrossIcon(true);
   };
 
+  // Function click event to show hamburger icon and hide cross icon
   function closeNav() {
     setHideHamburgerIcon(false);
     setsShowCrossIcon(false);
