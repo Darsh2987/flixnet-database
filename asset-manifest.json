@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/flixnet-database/static/css/main.5b447d2b.chunk.css",
+    "main.css": "/flixnet-database/static/css/main.404aabb4.chunk.css",
     "main.js": "/flixnet-database/static/js/main.de7568fb.chunk.js",
     "main.js.map": "/flixnet-database/static/js/main.de7568fb.chunk.js.map",
     "runtime-main.js": "/flixnet-database/static/js/runtime-main.260f3574.js",
@@ -10,14 +10,14 @@
     "static/js/3.3207ccb3.chunk.js": "/flixnet-database/static/js/3.3207ccb3.chunk.js",
     "static/js/3.3207ccb3.chunk.js.map": "/flixnet-database/static/js/3.3207ccb3.chunk.js.map",
     "index.html": "/flixnet-database/index.html",
-    "static/css/main.5b447d2b.chunk.css.map": "/flixnet-database/static/css/main.5b447d2b.chunk.css.map",
+    "static/css/main.404aabb4.chunk.css.map": "/flixnet-database/static/css/main.404aabb4.chunk.css.map",
     "static/js/2.f3727e60.chunk.js.LICENSE.txt": "/flixnet-database/static/js/2.f3727e60.chunk.js.LICENSE.txt",
     "static/media/no-image.e880635b.png": "/flixnet-database/static/media/no-image.e880635b.png"
   },
   "entrypoints": [
     "static/js/runtime-main.260f3574.js",
     "static/js/2.f3727e60.chunk.js",
-    "static/css/main.5b447d2b.chunk.css",
+    "static/css/main.404aabb4.chunk.css",
     "static/js/main.de7568fb.chunk.js"
   ]
 }
