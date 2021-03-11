@@ -22,7 +22,7 @@ const Header = (props) => {
     <div className="header">
       <div className="header__inner">
         <h1 className="header__logo">
-          <a href="/">Flixnet DB</a>
+          <a href="./">Flixnet DB</a>
         </h1>
         <Buttons setUsersChoice={props.setUsersChoice} hideHamburgerIcon={hideHamburgerIcon} />
         <FontAwesomeIcon icon={faBars} onClick={showMobileNav} className={hideHamburgerIcon ? "fa-bars--invisible" : ""} />
