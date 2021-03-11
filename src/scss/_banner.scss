@@ -99,6 +99,14 @@
 
     &__contents {
       width: 100%;
+
+      &-title {
+        font-size: 2.2rem;
+      }
+
+      &-overview {
+        font-size: 1.2rem;
+      }
     }
   }
 }

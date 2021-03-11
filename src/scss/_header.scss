@@ -11,8 +11,14 @@
   }
 
   &__logo a {
-    color: #6641aa;
+    color: #fff;
+    background-color: #350050;
     cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    letter-spacing: 1px;
+    font-size: 1.8rem;
   }
 
   .fa-bars,
